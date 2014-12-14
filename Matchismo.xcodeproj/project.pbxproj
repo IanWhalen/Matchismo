@@ -14,6 +14,10 @@
 		3C11DE191A3D044600B0CC9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C11DE181A3D044600B0CC9A /* Images.xcassets */; };
 		3C11DE1C1A3D044600B0CC9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C11DE1A1A3D044600B0CC9A /* LaunchScreen.xib */; };
 		3C11DE281A3D044600B0CC9A /* MatchismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C11DE271A3D044600B0CC9A /* MatchismoTests.m */; };
+		3C11DE361A3D273700B0CC9A /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C11DE351A3D273700B0CC9A /* Card.m */; };
+		3C11DE3D1A3D27FE00B0CC9A /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C11DE3C1A3D27FE00B0CC9A /* PlayingCard.m */; };
+		3C11DE401A3D29A000B0CC9A /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C11DE3F1A3D29A000B0CC9A /* Deck.m */; };
+		3C11DE431A3D29B300B0CC9A /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C11DE421A3D29B300B0CC9A /* PlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		3C11DE211A3D044600B0CC9A /* MatchismoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchismoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C11DE261A3D044600B0CC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C11DE271A3D044600B0CC9A /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
+		3C11DE341A3D273700B0CC9A /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Matchismo/Model/Card.h; sourceTree = "<group>"; };
+		3C11DE351A3D273700B0CC9A /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Matchismo/Model/Card.m; sourceTree = "<group>"; };
+		3C11DE3B1A3D27FE00B0CC9A /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCard.h; path = Matchismo/Model/PlayingCard.h; sourceTree = "<group>"; };
+		3C11DE3C1A3D27FE00B0CC9A /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Matchismo/Model/PlayingCard.m; sourceTree = "<group>"; };
+		3C11DE3E1A3D29A000B0CC9A /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Matchismo/Model/Deck.h; sourceTree = "<group>"; };
+		3C11DE3F1A3D29A000B0CC9A /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Matchismo/Model/Deck.m; sourceTree = "<group>"; };
+		3C11DE411A3D29B300B0CC9A /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Matchismo/Model/PlayingCardDeck.h; sourceTree = "<group>"; };
+		3C11DE421A3D29B300B0CC9A /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Matchismo/Model/PlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 		3C11DDFF1A3D044500B0CC9A = {
 			isa = PBXGroup;
 			children = (
+				3C11DE371A3D276F00B0CC9A /* Model */,
 				3C11DE0A1A3D044600B0CC9A /* Matchismo */,
 				3C11DE241A3D044600B0CC9A /* MatchismoTests */,
 				3C11DE091A3D044600B0CC9A /* Products */,
@@ -81,8 +94,6 @@
 		3C11DE0A1A3D044600B0CC9A /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				3C11DE0F1A3D044600B0CC9A /* AppDelegate.h */,
-				3C11DE101A3D044600B0CC9A /* AppDelegate.m */,
 				3C11DE121A3D044600B0CC9A /* ViewController.h */,
 				3C11DE131A3D044600B0CC9A /* ViewController.m */,
 				3C11DE151A3D044600B0CC9A /* Main.storyboard */,
@@ -96,6 +107,8 @@
 		3C11DE0B1A3D044600B0CC9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C11DE0F1A3D044600B0CC9A /* AppDelegate.h */,
+				3C11DE101A3D044600B0CC9A /* AppDelegate.m */,
 				3C11DE0C1A3D044600B0CC9A /* Info.plist */,
 				3C11DE0D1A3D044600B0CC9A /* main.m */,
 			);
@@ -117,6 +130,21 @@
 				3C11DE261A3D044600B0CC9A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C11DE371A3D276F00B0CC9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C11DE3B1A3D27FE00B0CC9A /* PlayingCard.h */,
+				3C11DE3C1A3D27FE00B0CC9A /* PlayingCard.m */,
+				3C11DE341A3D273700B0CC9A /* Card.h */,
+				3C11DE351A3D273700B0CC9A /* Card.m */,
+				3C11DE3E1A3D29A000B0CC9A /* Deck.h */,
+				3C11DE3F1A3D29A000B0CC9A /* Deck.m */,
+				3C11DE411A3D29B300B0CC9A /* PlayingCardDeck.h */,
+				3C11DE421A3D29B300B0CC9A /* PlayingCardDeck.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +250,10 @@
 				3C11DE141A3D044600B0CC9A /* ViewController.m in Sources */,
 				3C11DE111A3D044600B0CC9A /* AppDelegate.m in Sources */,
 				3C11DE0E1A3D044600B0CC9A /* main.m in Sources */,
+				3C11DE3D1A3D27FE00B0CC9A /* PlayingCard.m in Sources */,
+				3C11DE431A3D29B300B0CC9A /* PlayingCardDeck.m in Sources */,
+				3C11DE401A3D29A000B0CC9A /* Deck.m in Sources */,
+				3C11DE361A3D273700B0CC9A /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +375,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Matchismo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,9 +387,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Matchismo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -412,6 +448,7 @@
 				3C11DE2D1A3D044600B0CC9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C11DE2E1A3D044600B0CC9A /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +457,7 @@
 				3C11DE301A3D044600B0CC9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

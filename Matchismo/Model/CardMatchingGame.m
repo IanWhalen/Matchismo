@@ -15,6 +15,10 @@
 
 @implementation CardMatchingGame
 
+static const int MISMATCH_PENALTY = 2;
+static const int MATCH_BONUS = 4;
+static const int COST_TO_CHOOSE = 1;
+
 - (NSMutableArray *)cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
@@ -36,6 +40,7 @@
                 break;
             }
         }
+        self.score = 0;
     }
 
     return self;
@@ -45,10 +50,6 @@
 {
     return (index<[self.cards count]) ? self.cards[index] : nil;
 }
-
-static const int MISMATCH_PENALTY = 2;
-static const int MATCH_BONUS = 4;
-static const int COST_TO_CHOOSE = 1;
 
 - (void)chooseCardAtIndex:(NSUInteger)index
 {

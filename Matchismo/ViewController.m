@@ -25,6 +25,10 @@
                                                           usingDeck:[self createDeck]];
     return _game;
 }
+- (IBAction)matchModeController:(UISegmentedControl *)sender
+{
+    [self.game updateNumberOfCardsToMatch:sender.selectedSegmentIndex];
+}
 
 - (Deck *)createDeck
 {

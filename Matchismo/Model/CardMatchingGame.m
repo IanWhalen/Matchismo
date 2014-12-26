@@ -10,7 +10,9 @@
 
 @interface CardMatchingGame()
 @property (nonatomic, readwrite) NSInteger score;
+@property (nonatomic, readwrite) NSUInteger numberOfCardsToMatch;
 @property (nonatomic, strong) NSMutableArray *cards;
+@property (nonatomic, strong) NSMutableArray *chosenCards;
 @end
 
 @implementation CardMatchingGame
@@ -23,6 +25,11 @@ static const int COST_TO_CHOOSE = 1;
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
     return _cards;
+}
+- (NSMutableArray *)chosenCards
+{
+    if (!_chosenCards) _chosenCards = [[NSMutableArray alloc] init];
+    return _chosenCards;
 }
 
 - (instancetype)initWithCardCount:(NSUInteger)count
@@ -41,6 +48,7 @@ static const int COST_TO_CHOOSE = 1;
             }
         }
         self.score = 0;
+        self.numberOfCardsToMatch = 2;
     }
 
     return self;
@@ -54,29 +62,56 @@ static const int COST_TO_CHOOSE = 1;
 - (void)chooseCardAtIndex:(NSUInteger)index
 {
     Card *card = [self cardAtIndex:index];
-    
+
     if (!card.isMatched) {
         if (card.isChosen) {
             card.chosen = NO;
+            [self.chosenCards removeObject:card];
         } else {
-            for (Card *otherCard in self.cards) {
-                if (otherCard.isChosen && !otherCard.isMatched) {
-                    int matchScore = [card match:@[otherCard]];
-                    if (matchScore) {
-                        self.score += matchScore * MATCH_BONUS;
-                        card.matched = YES;
-                        otherCard.matched = YES;
-                    } else {
-                        self.score -= MISMATCH_PENALTY;
-                        otherCard.chosen = NO; // don't need this when matching > 2 cards
-                    }
-                    break; // will be different when matching > 2 cards
-                }
-            }
             self.score -= COST_TO_CHOOSE;
+
             card.chosen = YES;
+            [self.chosenCards addObject:card];
+
+            // only try to score if enough cards are now chosen
+            if ([self.chosenCards count] == self.numberOfCardsToMatch) {
+                [self compareChosenCards];
+            }
         }
+    } else {
     }
+}
+-(void)compareChosenCards
+{
+    // Get the most recently added card and an array containing all chosen cards
+    // without the most recently added card
+    NSRange range;
+    range.location = 0;
+    range.length = [self.chosenCards count] - 1;
+    NSArray *chosenCardsWithoutLastCard = [self.chosenCards subarrayWithRange:range];
+    Card *lastCard = [self.chosenCards lastObject];
+
+    int matchScore = [lastCard match:chosenCardsWithoutLastCard];
+
+    if (matchScore) {
+        self.score += matchScore * MATCH_BONUS;
+        for (Card *eachCard in self.chosenCards) {
+            eachCard.matched = YES;
+        }
+        [self.chosenCards removeAllObjects];
+    } else {
+        self.score -= MISMATCH_PENALTY;
+
+        Card *firstCard = [self.chosenCards firstObject];
+        firstCard.chosen = NO;
+        [self.chosenCards removeObject:firstCard];
+    }
+}
+
+- (void)updateNumberOfCardsToMatch:(NSUInteger)index
+{
+    self.numberOfCardsToMatch = index + 2;
+    NSLog(@"Now waiting until there are %ld cards chosen before matching", (long)self.numberOfCardsToMatch);
 }
 
 @end

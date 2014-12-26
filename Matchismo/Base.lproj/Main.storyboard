@@ -28,7 +28,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="28" width="78" height="115"/>
+                                    <rect key="frame" x="16" y="87" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -48,7 +48,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="28" width="78" height="115"/>
+                                    <rect key="frame" x="102" y="87" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -68,7 +68,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="188" y="28" width="78" height="115"/>
+                                    <rect key="frame" x="188" y="87" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -88,7 +88,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="274" y="28" width="78" height="115"/>
+                                    <rect key="frame" x="274" y="87" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -108,7 +108,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="151" width="78" height="115"/>
+                                    <rect key="frame" x="16" y="210" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -128,7 +128,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="151" width="78" height="115"/>
+                                    <rect key="frame" x="102" y="210" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -148,7 +148,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="188" y="151" width="78" height="115"/>
+                                    <rect key="frame" x="188" y="210" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -168,7 +168,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="274" y="151" width="78" height="115"/>
+                                    <rect key="frame" x="274" y="210" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -188,7 +188,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="274" width="78" height="115"/>
+                                    <rect key="frame" x="16" y="333" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -208,7 +208,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="274" width="78" height="115"/>
+                                    <rect key="frame" x="102" y="333" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -228,7 +228,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="188" y="274" width="78" height="115"/>
+                                    <rect key="frame" x="188" y="333" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -248,7 +248,7 @@
                                     <rect key="frame" x="261" y="342" width="78" height="115"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="274" y="274" width="78" height="115"/>
+                                    <rect key="frame" x="274" y="333" width="78" height="115"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="361" y="342" width="78" height="115"/>
@@ -263,7 +263,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="559" width="336" height="21"/>
+                                    <rect key="frame" x="16" y="571" width="336" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-JI-cwA">
@@ -275,12 +275,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="119" y="434" width="130" height="60"/>
+                                    <rect key="frame" x="119" y="472" width="130" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="resetGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8XK-4k-pQw"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Ob-YtU">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Two Card Match Mode"/>
+                                    <segment title="Three Card Match Mode"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="23" y="28" width="323" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="matchModeController:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MKu-Wy-YBn"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -298,6 +313,7 @@
                                 <exclude reference="rCr-pO-ct0"/>
                                 <exclude reference="V0P-ni-fH2"/>
                                 <exclude reference="kpg-JI-cwA"/>
+                                <exclude reference="IiF-Ob-YtU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -315,6 +331,7 @@
                                 <include reference="rCr-pO-ct0"/>
                                 <include reference="V0P-ni-fH2"/>
                                 <include reference="kpg-JI-cwA"/>
+                                <include reference="IiF-Ob-YtU"/>
                             </mask>
                         </variation>
                     </view>

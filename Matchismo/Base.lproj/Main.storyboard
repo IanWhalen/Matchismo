@@ -336,6 +336,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="matchModeController" destination="IiF-Ob-YtU" id="4zB-L7-fBG"/>
                         <outlet property="scoreLabel" destination="V0P-ni-fH2" id="veC-tz-LXS"/>
                         <outletCollection property="cardButtons" destination="rCr-pO-ct0" id="n3Q-WY-lEU"/>
                         <outletCollection property="cardButtons" destination="VOw-OH-d1Q" id="DBs-tC-U3o"/>

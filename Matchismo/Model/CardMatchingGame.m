@@ -14,6 +14,7 @@
 @property (nonatomic, readwrite) NSUInteger numberOfCardsToMatch;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, strong) NSMutableArray *chosenCards;
+@property (nonatomic, strong) NSMutableArray *actionHistory;
 @end
 
 @implementation CardMatchingGame
@@ -31,6 +32,11 @@ static const int COST_TO_CHOOSE = 1;
 {
     if (!_chosenCards) _chosenCards = [[NSMutableArray alloc] init];
     return _chosenCards;
+}
+- (NSMutableArray *)actionHistory
+{
+    if (!_actionHistory) _actionHistory = [[NSMutableArray alloc] init];
+    return _actionHistory;
 }
 
 - (instancetype)initWithCardCount:(NSUInteger)count
@@ -126,7 +132,13 @@ static const int COST_TO_CHOOSE = 1;
             [string appendFormat:@"%@", card.contents];
         }
     }
+
+    [self.actionHistory addObject:string];
     self.latestActionResult = string;
+}
+- (void)clearActionHistory
+{
+    self.actionHistory = nil;
 }
 
 @end

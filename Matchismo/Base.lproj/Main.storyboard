@@ -497,54 +497,6 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wb8-o3-A7f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-ni-fH2">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="552" width="164" height="40"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-JI-cwA">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Reset Game">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="230" y="552" width="122" height="40"/>
-                                </variation>
-                                <connections>
-                                    <action selector="resetGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8XK-4k-pQw"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Ob-YtU">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <segments>
-                                    <segment title="Two Card Match Mode"/>
-                                    <segment title="Three Card Match Mode"/>
-                                </segments>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="28" width="323" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="matchModeController:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MKu-Wy-YBn"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-yL-br5">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="498" width="336" height="46"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-Sj-eSa">
                                 <rect key="frame" x="261" y="242" width="78" height="115"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -665,6 +617,63 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uut-D7-eYa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-ni-fH2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="552" width="164" height="40"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-JI-cwA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Reset Game">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="230" y="552" width="122" height="40"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8XK-4k-pQw"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Ob-YtU">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Two Card Match Mode"/>
+                                    <segment title="Three Card Match Mode"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="23" y="28" width="323" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="matchModeController:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MKu-Wy-YBn"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ES6-r0-Pny">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="499" width="334" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="actionHistorySlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cLp-z7-Uoz"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-yL-br5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="427" width="336" height="46"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -692,16 +701,17 @@
                                 <exclude reference="pLD-mW-8Q8"/>
                                 <exclude reference="Wp3-OY-vJD"/>
                                 <exclude reference="ogO-TW-v2o"/>
-                                <exclude reference="V0P-ni-fH2"/>
-                                <exclude reference="kpg-JI-cwA"/>
-                                <exclude reference="IiF-Ob-YtU"/>
-                                <exclude reference="fYJ-yL-br5"/>
                                 <exclude reference="NRG-Sj-eSa"/>
                                 <exclude reference="Pt4-Ep-m6s"/>
                                 <exclude reference="Wv6-Tv-ZkZ"/>
                                 <exclude reference="0G1-dl-LyR"/>
                                 <exclude reference="4x9-ep-b5G"/>
                                 <exclude reference="EbZ-VT-FCD"/>
+                                <exclude reference="V0P-ni-fH2"/>
+                                <exclude reference="kpg-JI-cwA"/>
+                                <exclude reference="IiF-Ob-YtU"/>
+                                <exclude reference="ES6-r0-Pny"/>
+                                <exclude reference="fYJ-yL-br5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -729,20 +739,22 @@
                                 <include reference="pLD-mW-8Q8"/>
                                 <include reference="Wp3-OY-vJD"/>
                                 <include reference="ogO-TW-v2o"/>
-                                <include reference="V0P-ni-fH2"/>
-                                <include reference="kpg-JI-cwA"/>
-                                <include reference="IiF-Ob-YtU"/>
-                                <include reference="fYJ-yL-br5"/>
                                 <include reference="NRG-Sj-eSa"/>
                                 <include reference="Pt4-Ep-m6s"/>
                                 <include reference="Wv6-Tv-ZkZ"/>
                                 <include reference="0G1-dl-LyR"/>
                                 <include reference="4x9-ep-b5G"/>
                                 <include reference="EbZ-VT-FCD"/>
+                                <include reference="V0P-ni-fH2"/>
+                                <include reference="kpg-JI-cwA"/>
+                                <include reference="IiF-Ob-YtU"/>
+                                <include reference="ES6-r0-Pny"/>
+                                <include reference="fYJ-yL-br5"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="actionHistorySlider" destination="ES6-r0-Pny" id="rlg-of-trf"/>
                         <outlet property="latestActionResultLabel" destination="fYJ-yL-br5" id="ElF-a5-i8e"/>
                         <outlet property="matchModeController" destination="IiF-Ob-YtU" id="4zB-L7-fBG"/>
                         <outlet property="scoreLabel" destination="V0P-ni-fH2" id="veC-tz-LXS"/>

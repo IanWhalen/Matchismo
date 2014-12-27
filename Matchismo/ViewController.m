@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeController;
 @property (weak, nonatomic) IBOutlet UILabel *latestActionResultLabel;
+@property (weak, nonatomic) IBOutlet UISlider *actionHistorySlider;
 @end
 
 @implementation ViewController
@@ -43,6 +44,9 @@
                                               usingDeck:[self createDeck]];
     self.matchModeController.userInteractionEnabled = YES;
     self.matchModeController.enabled = YES;
+
+    [self.game clearActionHistory];
+    
     [self updateUI];
 }
 
@@ -53,7 +57,19 @@
 
     NSUInteger chosenButtonIndex = [self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:chosenButtonIndex];
+
+    self.latestActionResultLabel.alpha = 1;
+    self.actionHistorySlider.value = 1;
+    self.latestActionResultLabel.text = [NSString stringWithFormat:@"%@", self.game.latestActionResult];
     [self updateUI];
+}
+- (IBAction)actionHistorySlider:(UISlider *)sender {
+    if ([self.game.actionHistory count] > 0) {
+        self.latestActionResultLabel.alpha = .5;
+        
+        int index = floorf(sender.value * ([self.game.actionHistory count]-1));
+        self.latestActionResultLabel.text = [NSString stringWithFormat:@"%@", self.game.actionHistory[index]];
+    }
 }
 
 - (void)updateUI {
@@ -66,8 +82,7 @@
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                               forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
-        
-        self.latestActionResultLabel.text = [NSString stringWithFormat:@"%@", self.game.latestActionResult];
+
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
     }
 }

@@ -19,8 +19,10 @@
 - (void)updateNumberOfCardsToMatch:(NSUInteger)index;
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;
+- (void)clearActionHistory;
 
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic, readonly) NSString *latestActionResult;
+@property (nonatomic, readonly) NSMutableArray *actionHistory;
 
 @end

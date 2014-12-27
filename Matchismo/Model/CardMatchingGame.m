@@ -10,6 +10,7 @@
 
 @interface CardMatchingGame()
 @property (nonatomic, readwrite) NSInteger score;
+@property (nonatomic, readwrite) NSString *latestActionResult;
 @property (nonatomic, readwrite) NSUInteger numberOfCardsToMatch;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, strong) NSMutableArray *chosenCards;
@@ -78,7 +79,6 @@ static const int COST_TO_CHOOSE = 1;
                 [self compareChosenCards];
             }
         }
-    } else {
     }
 }
 -(void)compareChosenCards
@@ -98,8 +98,11 @@ static const int COST_TO_CHOOSE = 1;
         for (Card *eachCard in self.chosenCards) {
             eachCard.matched = YES;
         }
+        [self updateLatestActionResultForScore:matchScore * MATCH_BONUS];
+
         [self.chosenCards removeAllObjects];
     } else {
+        [self updateLatestActionResultForScore:0];
         self.score -= MISMATCH_PENALTY;
 
         Card *firstCard = [self.chosenCards firstObject];
@@ -111,7 +114,22 @@ static const int COST_TO_CHOOSE = 1;
 - (void)updateNumberOfCardsToMatch:(NSUInteger)index
 {
     self.numberOfCardsToMatch = index + 2;
-    NSLog(@"Now waiting until there are %ld cards chosen before matching", (long)self.numberOfCardsToMatch);
+}
+- (void)updateLatestActionResultForScore:(int)score
+{
+    NSMutableString *string = [NSMutableString stringWithString:@""];
+    if (score == 0) {
+        [string appendString:@"No match found amongst "];
+        for (Card *card in self.chosenCards) {
+            [string appendFormat:@"%@", card.contents];
+        }
+    } else {
+        [string appendFormat:@"%d points for matching ", score];
+        for (Card *card in self.chosenCards) {
+            [string appendFormat:@"%@", card.contents];
+        }
+    }
+    self.latestActionResult = string;
 }
 
 @end

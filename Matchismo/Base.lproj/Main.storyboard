@@ -263,24 +263,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="571" width="336" height="21"/>
+                                    <rect key="frame" x="16" y="552" width="164" height="40"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-JI-cwA">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Reset Game">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="119" y="472" width="130" height="60"/>
-                                </variation>
-                                <connections>
-                                    <action selector="resetGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8XK-4k-pQw"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Ob-YtU">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -296,6 +281,30 @@
                                     <action selector="matchModeController:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MKu-Wy-YBn"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-yL-br5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="498" width="336" height="46"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-JI-cwA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Reset Game">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="230" y="552" width="122" height="40"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8XK-4k-pQw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -312,8 +321,9 @@
                                 <exclude reference="O24-ju-ARb"/>
                                 <exclude reference="rCr-pO-ct0"/>
                                 <exclude reference="V0P-ni-fH2"/>
-                                <exclude reference="kpg-JI-cwA"/>
                                 <exclude reference="IiF-Ob-YtU"/>
+                                <exclude reference="fYJ-yL-br5"/>
+                                <exclude reference="kpg-JI-cwA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -330,12 +340,14 @@
                                 <include reference="O24-ju-ARb"/>
                                 <include reference="rCr-pO-ct0"/>
                                 <include reference="V0P-ni-fH2"/>
-                                <include reference="kpg-JI-cwA"/>
                                 <include reference="IiF-Ob-YtU"/>
+                                <include reference="fYJ-yL-br5"/>
+                                <include reference="kpg-JI-cwA"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="latestActionResultLabel" destination="fYJ-yL-br5" id="ElF-a5-i8e"/>
                         <outlet property="matchModeController" destination="IiF-Ob-YtU" id="4zB-L7-fBG"/>
                         <outlet property="scoreLabel" destination="V0P-ni-fH2" id="veC-tz-LXS"/>
                         <outletCollection property="cardButtons" destination="rCr-pO-ct0" id="n3Q-WY-lEU"/>

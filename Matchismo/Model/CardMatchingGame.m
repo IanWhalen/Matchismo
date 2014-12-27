@@ -83,15 +83,12 @@ static const int COST_TO_CHOOSE = 1;
 }
 -(void)compareChosenCards
 {
-    // Get the most recently added card and an array containing all chosen cards
-    // without the most recently added card
-    NSRange range;
-    range.location = 0;
-    range.length = [self.chosenCards count] - 1;
-    NSArray *chosenCardsWithoutLastCard = [self.chosenCards subarrayWithRange:range];
-    Card *lastCard = [self.chosenCards lastObject];
-
-    int matchScore = [lastCard match:chosenCardsWithoutLastCard];
+    // iterate through all cards but the last one, comparing to each following card
+    int matchScore = 0;
+    for (int i = 0; i < [self.chosenCards count]-1; i++) {
+        NSRange range = NSMakeRange(i+1, [self.chosenCards count]-i-1);
+        matchScore += [self.chosenCards[i] match:[self.chosenCards subarrayWithRange:range]];
+    }
 
     if (matchScore) {
         self.score += matchScore * MATCH_BONUS;
